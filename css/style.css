@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Overpass:wght@100..900&display=swap');
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Slate-300: hsl(212, 45%, 89%);
+    --Slate-500: hsl(216, 15%, 48%);
+    --Slate-900: hsl(218, 44%, 22%);
+    --main-size : 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border : none
+
+}
+body{
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Slate-300);
+    height: 100vh;
+}
+
+.qr-card{
+    max-width: 250px;
+    background-color: var(--White);
+    padding: var(--main-size);
+    border-radius: var(--main-size);
+    text-align: center;
+}
+
+.qr-card img{
+    width: 100%;
+    border-radius: var(--main-size);
+}
+
+.qr-card .title{
+    font-weight: 700;
+    margin-top: var(--main-size);
+    padding: 0 var(--main-size);
+    margin-bottom: var(--main-size);
+    color: var(--Slate-900);
+}
+.qr-card .paragraph{
+    font-size: 0.9em;
+    color: var(--Slate-500);
+    margin-bottom: var(--main-size);
+}
+@media (max-width:767px) {
+    .qr-card{
+        max-width: 400px;
+    }
+    .qr-card .title{
+        font-size: 1.5em;
+        margin-top: calc(var(--main-size) * 2) ;
+        padding: 0 calc(var(--main-size) * 2);
+        margin-bottom: calc(var(--main-size) * 2);
+        color: var(--Slate-900);
+    }
+    .qr-card .paragraph{
+        font-size: 1em;
+        margin-bottom: calc(var(--main-size) * 2);
+    }
+}
